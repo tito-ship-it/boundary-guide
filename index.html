@@ -34,8 +34,6 @@
             margin: 0 auto;
             padding: 0 16px 40px;
         }
-
-        /* カード */
         .card {
             background: #fff;
             border-radius: 12px;
@@ -51,14 +49,8 @@
             padding-bottom: 8px;
             border-bottom: 2px solid #E2E8F0;
         }
-        .card p {
-            font-size: 15px;
-        }
-        .card p + p {
-            margin-top: 10px;
-        }
-
-        /* 強調ボックス */
+        .card p { font-size: 15px; }
+        .card p + p { margin-top: 10px; }
         .highlight {
             background: #EBF4FF;
             border-left: 4px solid #2B6CB0;
@@ -83,8 +75,6 @@
             margin: 14px 0;
             font-size: 14px;
         }
-
-        /* 安心ポイント */
         .point-list {
             list-style: none;
             margin: 14px 0 0;
@@ -103,8 +93,6 @@
             font-weight: 700;
             font-size: 16px;
         }
-
-        /* フロー */
         .flow-step {
             display: flex;
             align-items: flex-start;
@@ -135,8 +123,6 @@
             font-size: 14px;
             color: #718096;
         }
-
-        /* FAQ */
         .faq-item {
             margin-bottom: 18px;
             padding-bottom: 18px;
@@ -153,8 +139,46 @@
             font-size: 14px;
             color: #4A5568;
         }
-
-        /* 連絡先 */
+        .form-group { margin-bottom: 14px; }
+        .form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+            color: #2D3748;
+            margin-bottom: 4px;
+        }
+        .required { color: #E53E3E; }
+        .form-input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #CBD5E0;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+            background: #fff;
+            color: #2D3748;
+            -webkit-appearance: none;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #2B6CB0;
+            box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.15);
+        }
+        .form-btn {
+            width: 100%;
+            padding: 14px;
+            background: #2B6CB0;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            margin-top: 4px;
+        }
+        .form-btn:active { background: #1A365D; }
+        .form-btn:disabled { background: #A0AEC0; cursor: not-allowed; }
         .contact {
             background: linear-gradient(135deg, #1A365D 0%, #2B6CB0 100%);
             color: #fff;
@@ -180,23 +204,18 @@
             margin-bottom: 14px;
             letter-spacing: 1px;
         }
-        .contact-tel-btn:active {
-            background: #E2E8F0;
-        }
+        .contact-tel-btn:active { background: #E2E8F0; }
         .contact-sub {
             font-size: 13px;
             opacity: 0.85;
             line-height: 1.7;
         }
-
         .footer {
             text-align: center;
             padding: 20px;
             font-size: 12px;
             color: #A0AEC0;
         }
-
-        /* 信頼バッジ */
         .trust {
             display: flex;
             justify-content: center;
@@ -220,7 +239,7 @@
 
 <div class="header">
     <h1>境界確認のご協力のお願い</h1>
-    <p>このページでは、お送りした書面の内容を詳しくご案内しています</p>
+    <p>お送りした書面の内容を詳しくご案内しています</p>
 </div>
 
 <div class="container">
@@ -228,8 +247,8 @@
     <!-- 1. まず安心してもらう -->
     <div class="card">
         <h2 class="card-title">お手紙をお受け取りいただいた方へ</h2>
-        <p>突然のお手紙で驚かれたかもしれません。ご安心ください。</p>
-        <p>お隣の土地の所有者様からのご依頼で、<strong>土地の境界を正式に確認する手続き</strong>を進めております。これは法律に基づいた正式な手続きであり、私どもは<strong>国家資格を持つ土地家屋調査士</strong>です。</p>
+        <p>この度は、お隣の土地との<strong>境界確認</strong>にご協力をお願いしたく、ご連絡を差し上げました。</p>
+        <p>私どもは<strong>土地家屋調査士</strong>という、土地の境界や測量を専門とする国家資格者です。お隣の土地の所有者様からのご依頼で、境界の確認作業を進めております。</p>
         <div class="highlight">
             この手続きは、お隣の方の土地だけでなく、<strong>あなた様の土地の境界を明確にする</strong>ことにもつながります。
         </div>
@@ -290,25 +309,20 @@
     <div class="card">
         <h2 class="card-title">署名・押印しても大丈夫ですか？</h2>
         <p>ご不安に思われるかもしれませんが、ご安心ください。</p>
-        <p>境界確認書は<strong>「ここが境界だとお互いに確認しました」</strong>という記録です。これによって：</p>
-        <ul class="point-list">
-            <li>あなた様の土地が勝手に狭くなることはありません</li>
-            <li>土地の所有権が移転することもありません</li>
-            <li>将来、あなた様の土地の売却や建築の際にも役立つ記録になります</li>
-        </ul>
+        <p>境界確認書は<strong>「ここが境界だとお互いに確認しました」</strong>という記録です。</p>
         <div class="highlight">
-            むしろ、<strong>境界が曖昧なままの方がリスク</strong>です。将来の建築やリフォーム、相続、売却の際に境界トラブルの原因になりかねません。
+            署名・押印により土地の面積が変わったり、所有権に影響することはありません。むしろ、お互いの土地の境界を明確にしておくことで、<strong>将来の売却・建築・相続の際にも安心</strong>です。
         </div>
+        <p>境界が曖昧なままだと、将来トラブルの原因になることもあります。この機会にはっきりさせておくことをおすすめいたします。</p>
     </div>
 
     <!-- 6. もし協力が難しい場合 -->
     <div class="card">
         <h2 class="card-title">もしご協力が難しい場合</h2>
-        <p>境界確認への協力を強制するものではございません。しかし、以下の点をご理解いただければ幸いです。</p>
+        <p>ご事情がおありの場合は、遠慮なくお申し付けください。日程の調整や代理の方でのお立会いなど、できる限り柔軟に対応いたします。</p>
         <div class="highlight-yellow">
             <strong>将来、あなた様が土地の売却・建築・相続を行う際にも、同じように隣接者の方々の協力が必要になります。</strong>今回ご協力いただくことで、その際にもスムーズに進めやすくなります。
         </div>
-        <p>ご事情がおありの場合は、遠慮なくお申し付けください。日程の調整や代理の方でのお立会いなど、できる限り柔軟に対応いたします。</p>
     </div>
 
     <!-- 7. FAQ -->
@@ -316,13 +330,13 @@
         <h2 class="card-title">よくあるご質問</h2>
 
         <div class="faq-item">
-            <p class="faq-q">Q. 費用は本当にかかりませんか？</p>
-            <p class="faq-a">はい。測量費用はご依頼主（お隣の所有者様）が負担しますので、あなた様のご負担は一切ございません。</p>
+            <p class="faq-q">Q. 費用はかかりますか？</p>
+            <p class="faq-a">隣接地の方にご費用の負担はございません。</p>
         </div>
 
         <div class="faq-item">
             <p class="faq-q">Q. 印鑑は実印が必要ですか？</p>
-            <p class="faq-a">認印で結構です。シャチハタでも問題ございません。</p>
+            <p class="faq-a">認印で結構です。</p>
         </div>
 
         <div class="faq-item">
@@ -337,8 +351,38 @@
 
         <div class="faq-item">
             <p class="faq-q">Q. 土地家屋調査士とはどんな資格ですか？</p>
-            <p class="faq-a">法務省所管の国家資格者です。土地の境界や面積に関する測量・登記の専門家であり、法律により守秘義務を負っています。</p>
+            <p class="faq-a">土地の境界や面積に関する測量・登記の専門家で、国家資格者です。法律により守秘義務を負っています。</p>
         </div>
+    </div>
+
+    <!-- 8. 連絡先フォーム -->
+    <div class="card" id="contact-form-section">
+        <h2 class="card-title">立会い日程のご連絡について</h2>
+        <p>現在、測量・検討作業を進めております。作業完了後（原則1ヶ月程度、境界状況により前後します）、<strong>立会い日程のご相談のためこちらからお電話</strong>いたします。</p>
+        <p style="margin-top: 10px;">お手数ですが、ご連絡先をお知らせいただけますと幸いです。</p>
+
+        <form id="contactForm" style="margin-top: 18px;">
+            <div class="form-group">
+                <label class="form-label" for="name">お名前 <span class="required">*</span></label>
+                <input type="text" id="name" class="form-input" placeholder="例：木村 太郎" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="phone">電話番号 <span class="required">*</span></label>
+                <input type="tel" id="phone" class="form-input" placeholder="例：090-1234-5678" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="time_pref">お電話しやすい時間帯</label>
+                <select id="time_pref" class="form-input">
+                    <option value="いつでも">いつでも</option>
+                    <option value="午前（9:00〜12:00）">午前（9:00〜12:00）</option>
+                    <option value="午後（12:00〜17:00）">午後（12:00〜17:00）</option>
+                    <option value="夕方以降（17:00〜）">夕方以降（17:00〜）</option>
+                    <option value="土日祝のみ">土日祝のみ</option>
+                </select>
+            </div>
+            <button type="submit" class="form-btn" id="submitBtn">送信する</button>
+            <div id="formResult" style="display: none; margin-top: 14px; padding: 14px; border-radius: 8px; font-size: 14px;"></div>
+        </form>
     </div>
 
     <!-- 連絡先 -->
@@ -355,7 +399,7 @@
     <div class="trust">
         <div class="trust-item">
             <strong>国家資格者</strong>
-            法務省所管
+            土地境界の専門家
         </div>
         <div class="trust-item">
             <strong>守秘義務</strong>
@@ -373,5 +417,62 @@
 
 </div>
 
+<script>
+const params = new URLSearchParams(window.location.search);
+const caseId = params.get('id') || '不明';
+
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbyEj5Lcc3pIaEHLcoRfQtOmf1psukmV7v_EwY1z_9vbDloxXc91jIFIGsDeXPvD9h-Shw/exec';
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const btn = document.getElementById('submitBtn');
+    const result = document.getElementById('formResult');
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const timePref = document.getElementById('time_pref').value;
+
+    if (!name || !phone) {
+        result.style.display = 'block';
+        result.style.background = '#FFF5F5';
+        result.style.color = '#E53E3E';
+        result.textContent = 'お名前と電話番号をご入力ください。';
+        return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = '送信中...';
+
+    fetch(GAS_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            case_id: caseId,
+            name: name,
+            phone: phone,
+            time_preference: timePref
+        })
+    })
+    .then(function() {
+        result.style.display = 'block';
+        result.style.background = '#F0FFF4';
+        result.style.color = '#276749';
+        result.textContent = 'ありがとうございます。ご連絡先を受け付けました。作業完了後、担当者よりお電話いたします。';
+        btn.textContent = '送信済み';
+        document.getElementById('name').disabled = true;
+        document.getElementById('phone').disabled = true;
+        document.getElementById('time_pref').disabled = true;
+    })
+    .catch(function() {
+        result.style.display = 'block';
+        result.style.background = '#FFF5F5';
+        result.style.color = '#E53E3E';
+        result.textContent = '送信に失敗しました。お手数ですが、お電話にてご連絡ください。';
+        btn.disabled = false;
+        btn.textContent = '送信する';
+    });
+});
+</script>
 </body>
 </html>
