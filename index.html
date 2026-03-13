@@ -380,6 +380,10 @@
                     <option value="土日祝のみ">土日祝のみ</option>
                 </select>
             </div>
+            <div class="form-group">
+                <label class="form-label" for="request">ご要望等ございましたらお聞かせください</label>
+                <textarea id="request" class="form-input" rows="4" placeholder="例：土日しか対応できません、境界について気になる点があります　等"></textarea>
+            </div>
             <button type="submit" class="form-btn" id="submitBtn">送信する</button>
             <div id="formResult" style="display: none; margin-top: 14px; padding: 14px; border-radius: 8px; font-size: 14px;"></div>
         </form>
@@ -416,6 +420,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     const name = document.getElementById('name').value.trim();
     const phone = document.getElementById('phone').value.trim();
     const timePref = document.getElementById('time_pref').value;
+    const request = document.getElementById('request').value.trim();
 
     if (!name || !phone) {
         result.style.display = 'block';
@@ -436,7 +441,8 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
             case_id: caseId,
             name: name,
             phone: phone,
-            time_preference: timePref
+            time_preference: timePref,
+            request: request
         })
     })
     .then(function() {
@@ -448,6 +454,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         document.getElementById('name').disabled = true;
         document.getElementById('phone').disabled = true;
         document.getElementById('time_pref').disabled = true;
+        document.getElementById('request').disabled = true;
     })
     .catch(function() {
         result.style.display = 'block';
