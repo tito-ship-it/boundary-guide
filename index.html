@@ -367,8 +367,12 @@
                 <input type="text" id="name" class="form-input" placeholder="例：木村 太郎" required>
             </div>
             <div class="form-group">
-                <label class="form-label" for="phone">電話番号 <span class="required">*</span></label>
-                <input type="tel" id="phone" class="form-input" placeholder="例：090-1234-5678" required>
+                <label class="form-label" for="phone">電話番号</label>
+                <input type="tel" id="phone" class="form-input" placeholder="例：090-1234-5678">
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="email">メールアドレス</label>
+                <input type="email" id="email" class="form-input" placeholder="例：taro@example.com">
             </div>
             <div class="form-group">
                 <label class="form-label" for="time_pref">お電話しやすい時間帯</label>
@@ -419,14 +423,15 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     const result = document.getElementById('formResult');
     const name = document.getElementById('name').value.trim();
     const phone = document.getElementById('phone').value.trim();
+    const email = document.getElementById('email').value.trim();
     const timePref = document.getElementById('time_pref').value;
     const request = document.getElementById('request').value.trim();
 
-    if (!name || !phone) {
+    if (!name || (!phone && !email)) {
         result.style.display = 'block';
         result.style.background = '#FFF5F5';
         result.style.color = '#E53E3E';
-        result.textContent = 'お名前と電話番号をご入力ください。';
+        result.textContent = 'お名前と、電話番号またはメールアドレスをご入力ください。';
         return;
     }
 
@@ -441,6 +446,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
             case_id: caseId,
             name: name,
             phone: phone,
+            email: email,
             time_preference: timePref,
             request: request
         })
@@ -453,6 +459,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         btn.textContent = '送信済み';
         document.getElementById('name').disabled = true;
         document.getElementById('phone').disabled = true;
+        document.getElementById('email').disabled = true;
         document.getElementById('time_pref').disabled = true;
         document.getElementById('request').disabled = true;
     })
